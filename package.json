@@ -1,0 +1,49 @@
+{
+	"name": "test",
+	"displayName": "ChatGPT Code Assistant",
+	"description": "An extension that integrates ChatGPT for code explanation, refactoring, suggestions, and optimization.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"activationEvents": [
+		"onCommand:test.chatGPT"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"package": "webpack --mode production",
+		"watch": "webpack --mode development --watch",
+		"test": "echo \"No tests yet!\" && exit 0",
+		"compile": "tsc -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.10",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.96.0",
+		"@typescript-eslint/eslint-plugin": "^8.22.0",
+		"@typescript-eslint/parser": "^8.22.0",
+		"@vscode/test-cli": "^0.0.10",
+		"@vscode/test-electron": "^2.4.1",
+		"eslint": "^9.19.0",
+		"source-map-loader": "^3.0.0",
+		"ts-loader": "^9.5.2",
+		"typescript": "^5.7.3",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^6.0.1"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "test.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "test.chatGPT",
+				"title": "ChatGPT Code Assistant"
+			}
+		]
+	}
+}
